@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+
+</head>
+<body>
+
+<div id="react-container"></div>
+
+<script type="text/babel">
+    class App extends React.Component{
+        render(){
+            return(
+                <>
+                <Header/>
+                <Content/>
+                <Footer/>
+                </>
+            )
+        }
+    }
+    class Header extends React.Component{
+        render(){
+            return(
+                <>
+                <h1>Hero Class: 1A</h1>
+                </>
+
+            )
+        }
+    }
+    class Content extends React.Component{
+        render(){
+            return(
+                <>
+                    <h3>Teachers</h3>
+                    <ul>
+                        <li>All Might</li>
+                        <li>Aizawa</li>
+                    </ul>
+                    <h3>Teachers</h3>
+                    <ol>
+                        <li>Yuga</li>
+                        <li>Ashido</li>
+                        <li>Asuit</li>
+                        <li>Lida</li>
+                        <li>Uraraka</li>
+                        <li>Ojiro</li>
+                        <li>Kaminari</li>
+                        <li>Kirishima</li>
+                        <li>Hanta</li>
+                        <li>Tokoyami</li>
+                        <li>Todoroki</li>
+                        <li>Hagkure</li>
+                        <li>Bakugo</li>
+                        <li>Midoriya</li>
+                        <li>Mineta</li>
+                        <li>Yaoyorozu</li>
+                    </ol>
+                </>
+            )
+        }
+    }
+
+    class Footer extends React.Component{
+        render(){
+            return(
+                <>
+                    <footer>My Hero Academia</footer>
+                </>
+
+            )
+        }
+    }
+/**  As a user, I see a Header component with the name of your cohort
+     As a user, I can see a Content component that contains a list of all your classmates
+     As a user, I can see a Footer component with your name
+ **/
+    const domContainer = document.querySelector('#react-container')
+    ReactDOM.render(<App />, domContainer)
+</script>
+</body>
+</html>
